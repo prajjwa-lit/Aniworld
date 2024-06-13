@@ -1,8 +1,9 @@
-import 'package:anime_world_tutorial/api/get_anime_by_ranking_type_api.dart';
-import 'package:anime_world_tutorial/core/screens/error_screen.dart';
-import 'package:anime_world_tutorial/core/widgets/loader.dart';
-import 'package:anime_world_tutorial/widgets/top_animes_image_slider.dart';
+import 'package:aniworld/widgets/top_animes_image_slider.dart';
 import 'package:flutter/material.dart';
+
+import '../api/get_anime_by_ranking_type_api.dart';
+import '../core/screens/error_screen.dart';
+import '../core/widgets/loader.dart';
 
 class TopAnimesList extends StatelessWidget {
   const TopAnimesList({super.key});

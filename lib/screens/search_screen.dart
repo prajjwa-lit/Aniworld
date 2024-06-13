@@ -29,7 +29,7 @@ class _SearchScreenState extends State<SearchScreen> {
           children: [
             const SizedBox(height: 50),
             const Text(
-              'Search for animes',
+              'Search for Anime',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.w400,
@@ -40,18 +40,11 @@ class _SearchScreenState extends State<SearchScreen> {
             InkWell(
               onTap: () {
                 showSearch(context: context, delegate: AnimeSearchDelegate());
-                //     .then((value) {
-                //   if (value != null) {
-                //     setState(() {
-                //       _animes = value;
-                //     });
-                //   }
-                // });
               },
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(10),
                 child: Container(
-                  height: 70,
+                  height: 50,
                   color: Colors.grey[300],
                   child: const Align(
                     alignment: Alignment.centerLeft,

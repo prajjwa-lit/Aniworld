@@ -1,4 +1,4 @@
-import 'package:anime_world_tutorial/views/ranked_animes_list_view.dart';
+import 'package:aniworld/views/ranked_animes_list_view.dart';
 import 'package:flutter/material.dart';
 
 import '../api/get_anime_by_ranking_type_api.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../api/get_seasonal_animes_api.dart';
+import '../api/get_seasonal_anime_api.dart';
 import '/core/screens/error_screen.dart';
 import '/core/widgets/loader.dart';
 import '../views/anime_list_view.dart';

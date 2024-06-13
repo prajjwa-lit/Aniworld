@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
         bottomNavigationBar: NavigationBar(
           elevation: 12,
           destinations: _destinations,
-          animationDuration: const Duration(milliseconds: 200),
+          animationDuration: const Duration(milliseconds: 300),
           backgroundColor: Theme.of(context).dialogBackgroundColor,
           selectedIndex: _currentScreenIndex,
           onDestinationSelected: (value) {

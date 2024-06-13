@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '/api/get_seasonal_animes_api.dart';
+// import '/api/get_seasonal_animes_api.dart';
+import '../api/get_seasonal_anime_api.dart';
 import '/screens/anime_details_screen.dart';
 import '/screens/view_all_seasonal_animes_screen.dart';
 import '/widgets/anime_tile.dart';
 
 class SeasonalAnimeView extends StatelessWidget {
   const SeasonalAnimeView({
-    Key? key,
+    super.key,
     required this.label,
-  }) : super(key: key);
+  });
 
   final String label;
 

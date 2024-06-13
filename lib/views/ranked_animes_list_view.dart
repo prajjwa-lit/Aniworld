@@ -1,7 +1,11 @@
-import 'package:anime_world_tutorial/common/styles/paddings.dart';
-import 'package:anime_world_tutorial/models/anime.dart';
-import 'package:anime_world_tutorial/widgets/anime_list_tile.dart';
+// import 'package:anime_world_tutorial/common/styles/paddings.dart';
+// import 'package:anime_world_tutorial/models/anime.dart';
+// import 'package:anime_world_tutorial/widgets/anime_list_tile.dart';
 import 'package:flutter/material.dart';
+
+import '../common/styles/paddings.dart';
+import '../models/anime.dart';
+import '../widgets/anime_list_tile.dart';
 
 class RankedAnimesListView extends StatelessWidget {
   const RankedAnimesListView({

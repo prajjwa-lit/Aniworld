@@ -1,4 +1,4 @@
-import 'package:anime_world_tutorial/views/anime_grid_view.dart';
+import 'package:aniworld/views/anime_grid_view.dart';
 import 'package:flutter/material.dart';
 
 import '/models/anime_category.dart';

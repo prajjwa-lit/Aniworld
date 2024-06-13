@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import '/config/app_config.dart';
 import '/models/anime.dart';
 
-Future<Iterable<Anime>> getAnimeRankingType({
+Future<Iterable<Anime>> getAnimeByRankingTypeApi({
   required String rankingType,
   required int limit,
 }) async {

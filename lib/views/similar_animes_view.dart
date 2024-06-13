@@ -1,6 +1,6 @@
-import 'package:anime_world_tutorial/screens/anime_details_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../screens/anime_details_screen.dart';
 import '/models/anime_node.dart';
 import '/widgets/anime_tile.dart';
 
@@ -36,7 +36,7 @@ class SimilarAnimesView extends StatelessWidget {
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             shrinkWrap: true,
-            itemCount: animes!.length,
+            itemCount: animes.length,
             separatorBuilder: (context, index) {
               return const SizedBox(width: 10);
             },

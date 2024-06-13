@@ -1,9 +1,10 @@
-import 'package:anime_world_tutorial/api/get_anime_by_ranking_type_api.dart';
-import 'package:anime_world_tutorial/core/screens/error_screen.dart';
-import 'package:anime_world_tutorial/core/widgets/loader.dart';
-import 'package:anime_world_tutorial/models/anime_category.dart';
-import 'package:anime_world_tutorial/views/animes_grid_list.dart';
 import 'package:flutter/material.dart';
+
+import '../api/get_anime_by_ranking_type_api.dart';
+import '../core/screens/error_screen.dart';
+import '../core/widgets/loader.dart';
+import '../models/anime_category.dart';
+import 'animes_grid_list.dart';
 
 class AnimeGridView extends StatelessWidget {
   const AnimeGridView({

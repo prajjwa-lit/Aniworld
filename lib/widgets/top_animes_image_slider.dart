@@ -1,8 +1,8 @@
-import 'package:anime_world_tutorial/screens/anime_details_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../screens/anime_details_screen.dart';
 import '/constants/app_colors.dart';
 import '/models/anime.dart';
 

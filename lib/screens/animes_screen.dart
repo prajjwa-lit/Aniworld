@@ -1,4 +1,4 @@
-import 'package:anime_world_tutorial/views/featured_animes.dart';
+import 'package:aniworld/views/featured_animes.dart';
 import 'package:flutter/material.dart';
 
 import '/common/extensions/extensions.dart';
@@ -26,7 +26,11 @@ class _AnimesScreenState extends State<AnimesScreen> {
     final currentSeason = getCurrentSeason().capitalize();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Anime World'),
+        title: const Text('Aniworld',
+        style: TextStyle(
+          fontWeight: FontWeight.w500,
+          letterSpacing: 1.5
+        ),),
         actions: [
           IconButton(
             onPressed: () {
@@ -48,6 +52,7 @@ class _AnimesScreenState extends State<AnimesScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              SizedBox(height: 10,),
               // Top Animes Slider
               const SizedBox(
                 height: 300,
