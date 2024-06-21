@@ -16,55 +16,57 @@ class AnimeListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Navigator.of(context).pushNamed(
-          AnimeDetailsScreen.routeName,
-          arguments: anime.node.id,
-        );
-      },
-      child: Padding(
-        padding: const EdgeInsets.only(
-          bottom: 16.0,
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(15),
-          child: SizedBox(
-            height: 100,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                // Image
-                SizedBox(
-                  height: 100,
-                  width: 150,
-                  child: CachedNetworkImage(
-                    imageUrl: anime.node.mainPicture.medium,
-                    fit: BoxFit.cover,
+    return Scaffold(
+      body: InkWell(
+        onTap: () {
+          Navigator.of(context).pushNamed(
+            AnimeDetailsScreen.routeName,
+            arguments: anime.node.id,
+          );
+        },
+        child: Padding(
+          padding: const EdgeInsets.only(
+            bottom: 16.0,
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(15),
+            child: SizedBox(
+              height: 100,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Image
+                  SizedBox(
+                    height: 100,
+                    width: 150,
+                    child: CachedNetworkImage(
+                      imageUrl: anime.node.mainPicture.medium,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-
-                const SizedBox(width: 20),
-
-                // Anime Info
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      rank != null
-                          ? AnimeRankBadge(rank: rank!)
-                          : const SizedBox.shrink(),
-                      const SizedBox(height: 10),
-                      Text(
-                        anime.node.title,
-                        style: Theme.of(context).textTheme.bodyMedium,
-                        maxLines: 2,
-                      ),
-                    ],
+      
+                  const SizedBox(width: 20),
+      
+                  // Anime Info
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        rank != null
+                            ? AnimeRankBadge(rank: rank!)
+                            : const SizedBox.shrink(),
+                        const SizedBox(height: 10),
+                        Text(
+                          anime.node.title,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                          maxLines: 2,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

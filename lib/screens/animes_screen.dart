@@ -52,7 +52,7 @@ class _AnimesScreenState extends State<AnimesScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               // Top Animes Slider
               const SizedBox(
                 height: 300,

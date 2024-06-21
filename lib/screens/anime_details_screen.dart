@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '/api/get_anime_details_api.dart';
@@ -72,8 +74,8 @@ class AnimeDetailsScreen extends StatelessWidget {
 
                         anime.background.isNotEmpty
                             ? _buildAnimeBackground(
-                                background: anime.background,
-                              )
+                          background: anime.background,
+                        )
                             : const SizedBox.shrink(),
 
                         const SizedBox(height: 20),
@@ -83,21 +85,27 @@ class AnimeDetailsScreen extends StatelessWidget {
                         const SizedBox(height: 20),
 
                         // Related Animes
-                        AnimeHorizontalListView(
-                          title: 'Related Animes',
-                          animes: anime.relatedAnime
-                              .map((relatedAnime) => relatedAnime.node)
-                              .toList(),
+                        SizedBox(
+                          height: 1000,
+                          child: AnimeHorizontalListView(
+                            title: 'Related Animes',
+                            animes: anime.relatedAnime
+                                .map((relatedAnime) => relatedAnime.node)
+                                .toList(),
+                          ),
                         ),
 
                         const SizedBox(height: 20),
 
                         // Recommendations
-                        AnimeHorizontalListView(
-                          title: 'Recommendations',
-                          animes: anime.recommendations
-                              .map((recommendation) => recommendation.node)
-                              .toList(),
+                        SizedBox(
+                          height: 1000,
+                          child: AnimeHorizontalListView(
+                            title: 'Recommendations',
+                            animes: anime.recommendations
+                                .map((recommendation) => recommendation.node)
+                                .toList(),
+                          ),
                         ),
                       ],
                     ),
@@ -161,7 +169,7 @@ class AnimeDetailsScreen extends StatelessWidget {
     String studios = anime.studios.map((studio) => studio.name).join(', ');
     String genres = anime.genres.map((genre) => genre.name).join(', ');
     String otherNames =
-        anime.alternativeTitles.synonyms.map((title) => title).join(', ');
+    anime.alternativeTitles.synonyms.map((title) => title).join(', ');
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

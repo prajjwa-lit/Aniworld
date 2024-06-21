@@ -39,7 +39,7 @@ class _TopAnimesImageSliderState extends State<TopAnimesImageSlider> {
               );
             },
             options: CarouselOptions(
-              enlargeFactor: 0.22,
+              enlargeFactor: 0.25,
               onPageChanged: (index, reason) {
                 setState(() {
                   _currentPageIndex = index;
@@ -61,16 +61,16 @@ class _TopAnimesImageSliderState extends State<TopAnimesImageSlider> {
             count: widget.animes.length,
             effect: CustomizableEffect(
               activeDotDecoration: DotDecoration(
-                rotationAngle: 180,
+                rotationAngle: 90,
                 borderRadius: BorderRadius.circular(8.0),
                 color: AppColors.blueColor,
-                width: 28.0,
-                height: 8.0,
+                width: 15.0,
+                height: 15.0,
               ),
               dotDecoration: DotDecoration(
                   borderRadius: BorderRadius.circular(8.0),
-                  width: 28.0,
-                  height: 8.0,
+                  width: 15.0,
+                  height: 15.0,
                   color: Theme.of(context).primaryColor),
             ),
           ),
@@ -90,24 +90,26 @@ class TopAnimePicture extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (_) => AnimeDetailsScreen(
-              id: anime.node.id,
+    return Scaffold(
+      body: InkWell(
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => AnimeDetailsScreen(
+                id: anime.node.id,
+              ),
             ),
-          ),
-        );
-      },
-      splashColor: Colors.white,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(8.0),
-        child: AspectRatio(
-          aspectRatio: 16 / 9,
-          child: Image.network(
-            anime.node.mainPicture.medium,
-            fit: BoxFit.cover,
+          );
+        },
+        splashColor: Colors.white,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(8.0),
+          child: AspectRatio(
+            aspectRatio: 16 / 9,
+            child: Image.network(
+              anime.node.mainPicture.medium,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
       ),

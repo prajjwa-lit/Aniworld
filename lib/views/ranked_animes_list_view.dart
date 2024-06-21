@@ -19,15 +19,22 @@ class RankedAnimesListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: Paddings.defaultPadding,
-      child: ListView.builder(
-        itemCount: animes.length,
-        itemBuilder: (context, index) {
-          final anime = animes.elementAt(index);
-
-          return AnimeListTile(
-            anime: anime,
-          );
-        },
+      child: SizedBox(
+        height: 1000,
+        width: MediaQuery.sizeOf(context).width,
+        child: ListView.builder(
+          itemCount: animes.length,
+          itemBuilder: (context, index) {
+            final anime = animes.elementAt(index);
+        
+            return SizedBox(
+              height: 100,
+              child: AnimeListTile(
+                anime: anime,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
