@@ -29,6 +29,7 @@ class DatabaseHelper {
     return db.getBool(Constants.isDarkMode) ?? false;
   }
 
+
   Future<bool> setDarkMode(bool isDark) async {
     final db = await instance.database;
     return await db.setBool(Constants.isDarkMode, isDark);

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import '/config/routes/routes.dart';
 import '/config/theme/app_theme.dart';
 import '/cubits/anime_title_language_cubit.dart';
 import 'cubits/theme_cubit.dart';
 import '/screens/home_screen.dart';
 
-void main()  {
-
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   runApp(
     MultiBlocProvider(
       providers: [

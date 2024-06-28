@@ -1,10 +1,11 @@
 import 'dart:convert';
+import 'package:aniworld/controller/controller.dart';
 
+import '/models/anime.dart';
+import '/config/app_config.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
-import '/config/app_config.dart';
-import '/models/anime.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 Future<Iterable<Anime>> getAnimeByRankingTypeApi({
   required String rankingType,
@@ -16,7 +17,7 @@ Future<Iterable<Anime>> getAnimeByRankingTypeApi({
   final response = await http.get(
     Uri.parse(baseUrl),
     headers: {
-      'X-MAL-CLIENT-ID': 'cd904935b258877e7e8d082f57c1bdbd',
+      'X-MAL-CLIENT-ID': Controller.getAPIkey(),
     },
   );
 
